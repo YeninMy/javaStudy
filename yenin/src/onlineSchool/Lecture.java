@@ -1,10 +1,11 @@
-package hw12;
+package onlineSchool;
 
 public class Lecture {
     private int id;
     private int personId;
     private String name;
     private String description;
+    private Homework homework;
 
     public String getName() {
         return name;
@@ -40,6 +41,7 @@ public class Lecture {
 
     public Lecture() {
     }
+    public  static Homework[] homeworkArray;
 
     public Lecture(int id) {
         this.id = id;
@@ -50,13 +52,23 @@ public class Lecture {
         this.personId = personId;
     }
 
+    public Lecture(int id, String name, Homework homework) {
+        this.id = id;
+        this.name = name;
+        int h = 0;
+        for (int i =0;i< homeworkArray.length; i++){
+            if (homeworkArray[i] != null){
+                h++;
+            }
+        }
+        this.homeworkArray[h] = homework;
+    }
+
     @Override
     public String toString() {
         return "Lecture{" +
                 "id=" + id +
-                ", personId=" + personId +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 '}';
     }
 }

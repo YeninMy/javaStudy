@@ -1,4 +1,4 @@
-package hw12;
+package os1;
 
 public class Cource {
     private String name;

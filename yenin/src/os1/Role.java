@@ -1,4 +1,4 @@
-package hw12;
+package os1;
 
 public enum Role {
     STUDENT,
